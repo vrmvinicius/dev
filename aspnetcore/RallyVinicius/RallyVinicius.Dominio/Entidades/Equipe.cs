@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace RallyVinicius.Dominio.Entidades
@@ -15,9 +16,31 @@ namespace RallyVinicius.Dominio.Entidades
 
         public ICollection<Piloto> Pilotos { get; set; }
 
+        public Equipe()
+        {
+            Pilotos = new List<Piloto>();
+        }
+
+        public void AdicionarPiloto(Piloto piloto)
+        {
+            if (piloto != null && piloto.Validado())
+            {
+                if (!Pilotos.Any(p => p.Id == piloto.Id))
+                    Pilotos.Add(piloto);
+            }
+        }
+
+        public Piloto ObterPorId(int id)
+        {
+            return Pilotos.FirstOrDefault(p => p.Id == id);
+        }
+
         public bool Validado()
         {
-            if (String.IsNullOrEmpty(Nome))
+            if (string.IsNullOrEmpty(Nome))
+                return false;
+
+            if (string.IsNullOrEmpty(CodigoIdentificador))
                 return false;
 
             return true;
