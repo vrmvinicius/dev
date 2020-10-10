@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HNDCXywVskHXuQHWmTwF4nZ+yaWdB6n2si5BQzdjafWA5tIGrRjjRDJcyYLLpiw3bPw04I18e8VXuDeLt8ZjiQ==",
+  "dgSpecHash": "Aprx3cl1jkiWEMGAqGRvS/8lyN2onVo9JcSiXZAgv6WmVj1OXWa0L551NHa3nB36c6fjiRdu7kgxpGXbo0XqhA==",
   "success": true,
   "projectFilePath": "C:\\dev\\aspnetcore\\RallyVinicius\\RallyVinicius.Dominio.Testes\\RallyVinicius.Dominio.Testes.csproj",
   "expectedPackageFiles": [

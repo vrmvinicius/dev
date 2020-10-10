@@ -14,5 +14,13 @@ namespace RallyVinicius.Dominio.Entidades
         public virtual Temporada Temporada { get; set; } //O virtual indica carregamento sob demanda do EntityFramework.
 
         public ICollection<Piloto> Pilotos { get; set; }
+
+        public bool Validado()
+        {
+            if (String.IsNullOrEmpty(Nome))
+                return false;
+
+            return true;
+        }
     }
 }

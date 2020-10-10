@@ -1634,6 +1634,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "RallyVinicius.Dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/RallyVinicius.Dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RallyVinicius.Dominio.dll": {}
+        }
       }
     }
   },
@@ -5639,6 +5649,11 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "RallyVinicius.Dominio/1.0.0": {
+      "type": "project",
+      "path": "../RallyVinicius.Dominio/RallyVinicius.Dominio.csproj",
+      "msbuildProject": "../RallyVinicius.Dominio/RallyVinicius.Dominio.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5646,6 +5661,7 @@
       "MSTest.TestAdapter >= 2.1.0",
       "MSTest.TestFramework >= 2.1.0",
       "Microsoft.NET.Test.Sdk >= 16.5.0",
+      "RallyVinicius.Dominio >= 1.0.0",
       "coverlet.collector >= 1.2.0"
     ]
   },
@@ -5678,7 +5694,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\dev\\aspnetcore\\RallyVinicius\\RallyVinicius.Dominio\\RallyVinicius.Dominio.csproj": {
+              "projectPath": "C:\\dev\\aspnetcore\\RallyVinicius\\RallyVinicius.Dominio\\RallyVinicius.Dominio.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

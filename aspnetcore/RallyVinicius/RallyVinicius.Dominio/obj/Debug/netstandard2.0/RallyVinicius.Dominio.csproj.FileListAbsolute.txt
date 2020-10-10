@@ -1,0 +1,9 @@
+C:\dev\aspnetcore\RallyVinicius\RallyVinicius.Dominio\bin\Debug\netstandard2.0\RallyVinicius.Dominio.deps.json
+C:\dev\aspnetcore\RallyVinicius\RallyVinicius.Dominio\bin\Debug\netstandard2.0\RallyVinicius.Dominio.dll
+C:\dev\aspnetcore\RallyVinicius\RallyVinicius.Dominio\bin\Debug\netstandard2.0\RallyVinicius.Dominio.pdb
+C:\dev\aspnetcore\RallyVinicius\RallyVinicius.Dominio\obj\Debug\netstandard2.0\RallyVinicius.Dominio.csprojAssemblyReference.cache
+C:\dev\aspnetcore\RallyVinicius\RallyVinicius.Dominio\obj\Debug\netstandard2.0\RallyVinicius.Dominio.AssemblyInfoInputs.cache
+C:\dev\aspnetcore\RallyVinicius\RallyVinicius.Dominio\obj\Debug\netstandard2.0\RallyVinicius.Dominio.AssemblyInfo.cs
+C:\dev\aspnetcore\RallyVinicius\RallyVinicius.Dominio\obj\Debug\netstandard2.0\RallyVinicius.Dominio.csproj.CoreCompileInputs.cache
+C:\dev\aspnetcore\RallyVinicius\RallyVinicius.Dominio\obj\Debug\netstandard2.0\RallyVinicius.Dominio.dll
+C:\dev\aspnetcore\RallyVinicius\RallyVinicius.Dominio\obj\Debug\netstandard2.0\RallyVinicius.Dominio.pdb

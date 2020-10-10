@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Text;
 
 namespace RallyVinicius.Dominio.Entidades
 {
@@ -14,5 +12,21 @@ namespace RallyVinicius.Dominio.Entidades
         public DateTime? DataFim { get; set; } //Pode cadastrar a temporada sem data para fim, por isso, 'nullable'.
 
         public ICollection<Equipe> Equipes { get; set; }
+
+        public Temporada()
+        {
+            Equipes = new List<Equipe>();
+        }
+
+        public void AdicionarEquipe(Equipe equipe)
+        {
+            if (equipe != null)
+            {
+                if (equipe.Validado())
+                {
+                    Equipes.Add(equipe);
+                }
+            }
+        }
     }
 }
