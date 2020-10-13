@@ -5,9 +5,15 @@ VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Dominio", "0 - Dominio", "{DCE06650-9048-45C8-AFBE-2FD5D9C0E48E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RallyVinicius.Dominio", "RallyVinicius.Dominio\RallyVinicius.Dominio.csproj", "{EA09FA61-0C1E-4E5A-ACD8-EAADDB44807A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RallyVinicius.Dominio", "RallyVinicius.Dominio\RallyVinicius.Dominio.csproj", "{EA09FA61-0C1E-4E5A-ACD8-EAADDB44807A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RallyVinicius.Dominio.Testes", "RallyVinicius.Dominio.Testes\RallyVinicius.Dominio.Testes.csproj", "{EC43AF32-D510-428A-958F-1EC040A82030}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RallyVinicius.Dominio.Testes", "RallyVinicius.Dominio.Testes\RallyVinicius.Dominio.Testes.csproj", "{EC43AF32-D510-428A-958F-1EC040A82030}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - WEB", "1 - WEB", "{23CF1732-24B6-4417-837B-53A9D1C416AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.1 - Api", "1.1 - Api", "{BC8BBA48-8D63-4BFA-9532-6D54CEA78058}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RallyVinicius.API", "RallyVinicius.API\RallyVinicius.API.csproj", "{90E0D310-20FD-4415-BABB-D3F55BE97B66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +29,10 @@ Global
 		{EC43AF32-D510-428A-958F-1EC040A82030}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC43AF32-D510-428A-958F-1EC040A82030}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC43AF32-D510-428A-958F-1EC040A82030}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90E0D310-20FD-4415-BABB-D3F55BE97B66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90E0D310-20FD-4415-BABB-D3F55BE97B66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90E0D310-20FD-4415-BABB-D3F55BE97B66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90E0D310-20FD-4415-BABB-D3F55BE97B66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +40,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{EA09FA61-0C1E-4E5A-ACD8-EAADDB44807A} = {DCE06650-9048-45C8-AFBE-2FD5D9C0E48E}
 		{EC43AF32-D510-428A-958F-1EC040A82030} = {DCE06650-9048-45C8-AFBE-2FD5D9C0E48E}
+		{BC8BBA48-8D63-4BFA-9532-6D54CEA78058} = {23CF1732-24B6-4417-837B-53A9D1C416AE}
+		{90E0D310-20FD-4415-BABB-D3F55BE97B66} = {BC8BBA48-8D63-4BFA-9532-6D54CEA78058}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AFA14D4B-ECBE-4732-A04E-8CAFCD382362}
