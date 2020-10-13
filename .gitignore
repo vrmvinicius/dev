@@ -7,3 +7,6 @@
 /aspnetcore/RallyVinicius/.vs/RallyVinicius/v16/TestStore/0/001.testlog
 /blazor
 /react
+/aspnetcore/RallyVinicius/RallyVinicius.API/bin
+/aspnetcore/RallyVinicius/RallyVinicius.API/obj
+/aspnetcore/RallyVinicius/.vs/RallyVinicius/config/applicationhost.config

@@ -32,8 +32,11 @@ namespace RallyVinicius.API
             services.AddDbContext<RallyDbContexto>(opt => opt.UseInMemoryDatabase("RallyDB"), 
                 ServiceLifetime.Scoped, 
                 ServiceLifetime.Scoped);
+            
             //Padrão do EFCore.
-            services.AddControllers();
+            services.AddControllers()
+                    .AddNewtonsoftJson();
+
             //Registra a infjeção de dependência entre Interfaces e Classes dos repositorios.
             services.AddScoped<IPilotoRepositorio, PilotoRepositorio>();
         }

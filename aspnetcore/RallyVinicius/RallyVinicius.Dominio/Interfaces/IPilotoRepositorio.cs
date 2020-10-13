@@ -8,6 +8,10 @@ namespace RallyVinicius.Dominio.Interfaces
     public interface IPilotoRepositorio
     {
         void Adicionar(Piloto piloto);
-        ICollection<Piloto> ObterTodos();        
+        ICollection<Piloto> ObterTodos();
+        bool Existe(int pilotoId);
+        Piloto Obter(int pilotoId);
+        void Atualizar(Piloto piloto);
+        void Remover(Piloto piloto);
     }
 }
