@@ -10,3 +10,5 @@
 /aspnetcore/RallyVinicius/RallyVinicius.API/bin
 /aspnetcore/RallyVinicius/RallyVinicius.API/obj
 /aspnetcore/RallyVinicius/.vs/RallyVinicius/config/applicationhost.config
+/aspnetcore/RallyVinicius/RallyVinicius.API/Logs
+/aspnetcore/RallyVinicius/.vs/RallyVinicius/v16/*.suo

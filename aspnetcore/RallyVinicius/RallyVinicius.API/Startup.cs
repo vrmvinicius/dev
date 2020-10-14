@@ -40,6 +40,9 @@ namespace RallyVinicius.API
 
             //Registra a infjeção de dependência entre Interfaces e Classes dos repositorios.
             services.AddScoped<IPilotoRepositorio, PilotoRepositorio>();
+            services.AddScoped<ITemporadaRepositorio, TemporadaRepositorio>();
+            services.AddScoped<ITelemetriaRepositorio, TelemetriaRepositorio>();
+            services.AddScoped<IEquipeRepositorio, EquipeRepositorio>();
 
             //Permite a utilização do 'AutoMapper'.
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

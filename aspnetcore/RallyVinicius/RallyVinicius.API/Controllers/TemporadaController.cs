@@ -13,34 +13,34 @@ using System.Threading.Tasks;
 namespace RallyVinicius.API.Controllers
 {
     [ApiController]
-    [Route("api/pilotos")] //Pluralização do nome.
-    public class PilotoController : ControllerBase
+    [Route("api/temporadas")] //Pluralização do nome.
+    public class TemporadaController : ControllerBase
     {
         //Todos recebem suas instâncias via 'injeção de dependência'.
-        private readonly IPilotoRepositorio _pilotoRepositorio;
+        private readonly ITemporadaRepositorio _temporadaRepositorio;
         private readonly IMapper _mapper;
-        private readonly ILogger<PilotoController> _logger;
+        private readonly ILogger<TemporadaController> _logger;
 
-        public PilotoController(IPilotoRepositorio pilotoRepositorio, IMapper mapper, ILogger<PilotoController> logger)
+        public TemporadaController(ITemporadaRepositorio temporadaRepositorio, IMapper mapper, ILogger<TemporadaController> logger)
         {
-            _pilotoRepositorio = pilotoRepositorio;
+            _temporadaRepositorio = temporadaRepositorio;
             _mapper = mapper;
             _logger = logger;
         }
 
-        [HttpGet("{id}", Name="Obter")]
+        [HttpGet("{id}", Name = "ObterTemporada")]
         public IActionResult Obter(int id)
         {
             try
             {
-                var piloto = _pilotoRepositorio.Obter(id);
-                
-                if (piloto == null)
+                var temporada = _temporadaRepositorio.Obter(id);
+
+                if (temporada == null)
                     return NotFound();
 
-                var pilotoModelo = _mapper.Map<PilotoModelo>(piloto);
+                var temporadaModelo = _mapper.Map<TemporadaModelo>(temporada);
 
-                return Ok(pilotoModelo);
+                return Ok(temporadaModelo);
             }
             catch (Exception ex)
             {
@@ -50,46 +50,46 @@ namespace RallyVinicius.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult AdicionarPiloto([FromBody] PilotoModelo pilotoModelo)
+        public IActionResult AdicionarTemporada([FromBody] TemporadaModelo temporadaModelo)
         {
             try
             {
                 _logger.LogInformation("Adicionando um piloto..");
 
                 //Repassa do modelo para a entidade de domínio de forma automatica.
-                var piloto = _mapper.Map<Piloto>(pilotoModelo);
-                
-                if (_pilotoRepositorio.Existe(piloto.Id))
+                var temporada = _mapper.Map<Temporada>(temporadaModelo);
+
+                if (_temporadaRepositorio.Existe(temporada.Id))
                     return StatusCode(409, "Já existe um piloto cadastrado com esta identificação");
 
-                _pilotoRepositorio.Adicionar(piloto);
-                                
-                var pilotoModeloRetorno = _mapper.Map<PilotoModelo>(piloto);
+                _temporadaRepositorio.Adicionar(temporada);
 
-                //Retorna o caminho completo do 'recurso' relacionado ao novo piloto inserido e o objeto de modelo vinculado.
-                return CreatedAtRoute("Obter", new { id = piloto.Id }, pilotoModeloRetorno);
+                var temporadaModeloRetorno = _mapper.Map<TemporadaModelo>(temporada);
+
+                //Retorna o caminho completo do novo 'recurso'.
+                return CreatedAtRoute("ObterTemporada", new { id = temporada.Id }, temporadaModeloRetorno);
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex.ToString());
                 return StatusCode(500, "Ocorreu uma falha inesperada. Entre em contato com o suporte técnico.");
-            }                        
+            }
         }
 
         [HttpPut]
-        public IActionResult AtualizarPiloto([FromBody] PilotoModelo pilotoModelo)
+        public IActionResult AtualizarTemporada([FromBody] TemporadaModelo temporadaModelo)
         {
             try
-            {                
-                var piloto = _mapper.Map<Piloto>(pilotoModelo);
+            {
+                var temporada = _mapper.Map<Temporada>(temporadaModelo);
 
-                if (!_pilotoRepositorio.Existe(piloto.Id))
+                if (!_temporadaRepositorio.Existe(temporada.Id))
                     return NotFound();
 
-                _pilotoRepositorio.Atualizar(piloto);
+                _temporadaRepositorio.Atualizar(temporada);
 
                 //Apenas indica que a operação ocorreu corretamente.
-                return NoContent(); 
+                return NoContent();
             }
             catch (Exception ex)
             {
@@ -99,7 +99,7 @@ namespace RallyVinicius.API.Controllers
         }
 
         [HttpPatch("{id}")]
-        public IActionResult AtualizarParcialmentePiloto(int id, [FromBody] JsonPatchDocument<PilotoModelo> patchPilotoModelo)
+        public IActionResult AtualizarParcialmenteTemporada(int id, [FromBody] JsonPatchDocument<TemporadaModelo> patchTemporadaModelo)
         {
             //@patchPiloto - Conterá o fragmento de 'json' com os dados a serem atualizados.            
             //Exemplo de fragmento de json (patch):
@@ -113,22 +113,22 @@ namespace RallyVinicius.API.Controllers
             try
             {
                 //Se não existe já sai.
-                if (!_pilotoRepositorio.Existe(id))
+                if (!_temporadaRepositorio.Existe(id))
                     return NotFound();
-                
+
                 //Obtém o objeto monitorado do Entity Framework da base.
-                var piloto = _pilotoRepositorio.Obter(id);
+                var temporada = _temporadaRepositorio.Obter(id);
                 //Gera uma instância do objeto de negócio para o objeto de modelo.
-                var pilotoModelo = _mapper.Map<PilotoModelo>(piloto);
+                var temporadaModelo = _mapper.Map<TemporadaModelo>(temporada);
 
                 //Aplica as alterações do modelo.
-                patchPilotoModelo.ApplyTo(pilotoModelo);
+                patchTemporadaModelo.ApplyTo(temporadaModelo);
                 //Mapeia no objeto retornado anteriormente pelo entity framework (aqui não pode gerar nova instância se não dá falha).
-                piloto = _mapper.Map(pilotoModelo, piloto);
-                                
+                temporada = _mapper.Map(temporadaModelo, temporada);
+
                 //Efetiva a atualização.
-                _pilotoRepositorio.Atualizar(piloto);
-                
+                _temporadaRepositorio.Atualizar(temporada);
+
                 return NoContent();
             }
             catch (Exception ex)
@@ -139,15 +139,15 @@ namespace RallyVinicius.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult RemoverPiloto(int id)
+        public IActionResult RemoverTemporada(int id)
         {
             try
             {
-                var piloto = _pilotoRepositorio.Obter(id);
-                if (piloto == null)
+                Temporada temporada = _temporadaRepositorio.Obter(id);
+                if (temporada == null)
                     return NotFound();
 
-                _pilotoRepositorio.Remover(piloto);
+                _temporadaRepositorio.Remover(temporada);
 
                 return NoContent();
             }

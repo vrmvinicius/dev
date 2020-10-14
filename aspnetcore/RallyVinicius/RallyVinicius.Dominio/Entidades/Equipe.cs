@@ -14,23 +14,23 @@ namespace RallyVinicius.Dominio.Entidades
         public int TemporadaId { get; set; } //Facilitar o EntityFramework no mapeamento.
         public virtual Temporada Temporada { get; set; } //O virtual indica carregamento sob demanda do EntityFramework.
 
-        public ICollection<Piloto> Pilotos { get; set; }
+        public ICollection<Equipe> Pilotos { get; set; }
 
         public Equipe()
         {
-            Pilotos = new List<Piloto>();
+            Pilotos = new List<Equipe>();
         }
 
-        public void AdicionarPiloto(Piloto piloto)
+        public void AdicionarPiloto(Equipe equipe)
         {
-            if (piloto != null && piloto.Validado())
+            if (equipe != null && equipe.Validado())
             {
-                if (!Pilotos.Any(p => p.Id == piloto.Id))
-                    Pilotos.Add(piloto);
+                if (!Pilotos.Any(p => p.Id == equipe.Id))
+                    Pilotos.Add(equipe);
             }
         }
 
-        public Piloto ObterPorId(int id)
+        public Equipe ObterPorId(int id)
         {
             return Pilotos.FirstOrDefault(p => p.Id == id);
         }

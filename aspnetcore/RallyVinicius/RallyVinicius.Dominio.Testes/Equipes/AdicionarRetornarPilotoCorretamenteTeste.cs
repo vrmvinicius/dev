@@ -8,12 +8,12 @@ namespace RallyVinicius.Dominio.Testes.Temporadas
     public class AdicionarRetornarPilotoCorretamenteTeste
     {
         Equipe equipe;
-        Piloto piloto1;
-        Piloto piloto2;
-        Piloto piloto3;
-        Piloto piloto1Retorno;
-        Piloto piloto2Retorno;
-        Piloto piloto3Retorno;
+        Equipe piloto1;
+        Equipe piloto2;
+        Equipe piloto3;
+        Equipe piloto1Retorno;
+        Equipe piloto2Retorno;
+        Equipe piloto3Retorno;
 
         [TestInitialize]
         public void Initialize()
@@ -23,15 +23,15 @@ namespace RallyVinicius.Dominio.Testes.Temporadas
             equipe.Nome = "EquipeTeste";
             equipe.CodigoIdentificador = "JKL";
                         
-            piloto1 = new Piloto();
+            piloto1 = new Equipe();
             piloto1.Id = 1;
             piloto1.Nome = "Joao";
 
-            piloto2 = new Piloto();
+            piloto2 = new Equipe();
             piloto2.Id = 2;
             piloto2.Nome = "Maria";
 
-            piloto3 = new Piloto();
+            piloto3 = new Equipe();
             piloto3.Id = 3;
             piloto3.Nome = "";
 
