@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -39,6 +40,9 @@ namespace RallyVinicius.API
 
             //Registra a infjeção de dependência entre Interfaces e Classes dos repositorios.
             services.AddScoped<IPilotoRepositorio, PilotoRepositorio>();
+
+            //Permite a utilização do 'AutoMapper'.
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
