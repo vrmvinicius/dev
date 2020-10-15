@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Interfaces\Notification\" />
+    <Folder Include="Interfaces\Servicos\" />
+    <Folder Include="Interfaces\Repositorios\" />
+    <Folder Include="Notification\" />
+  </ItemGroup>
+
+</Project>

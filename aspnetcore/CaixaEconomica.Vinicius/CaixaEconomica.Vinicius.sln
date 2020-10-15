@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Dominio", "0 - Dominio", "{1B24270C-BF8C-464F-8149-C20EA8B9BA4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Testes", "1 - Testes", "{F5F1766B-AB67-4ACC-BD8A-16F26B8726A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Infra", "2 - Infra", "{BECBA791-F2C4-48A3-8A2A-B61E347D9F11}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.1 - Dados", "2.1 - Dados", "{780CBB2F-8D3B-4F9A-969F-557BED832956}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.2 - CrossCutting", "2.2 - CrossCutting", "{0F1C0649-8892-4A6B-803D-7664463B6FE2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - API", "3 - API", "{C3C4C84E-2E27-47EB-ADE4-7A2FCD9703A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaEconomica.Vinicius.Dominio", "CaixaEconomica.Vinicius.Dominio\CaixaEconomica.Vinicius.Dominio.csproj", "{69897B9F-3542-4A99-8AB7-974C3C2801B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaEconomica.Vinicius.Testes.Dominio", "CaixaEconomica.Vinicius.Testes.Dominio\CaixaEconomica.Vinicius.Testes.Dominio.csproj", "{65F71895-8D9A-41B1-B1F0-323517F9D6DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaEconomica.Vinicius.Infra.Dados", "CaixaEconomica.Vinicius.Infra.Dados\CaixaEconomica.Vinicius.Infra.Dados.csproj", "{37B693E6-0898-49BF-A518-F0D28617D696}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaEconomica.Vinicius.Infra.CrossCutting.Ioc", "CaixaEconomica.Vinicius.Infra.CrossCutting\CaixaEconomica.Vinicius.Infra.CrossCutting.Ioc.csproj", "{EC797066-007A-4CD1-98CD-FB617ED355EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaEconomica.Vinicius.API", "CaixaEconomica.Vinicius.API\CaixaEconomica.Vinicius.API.csproj", "{7E6A7B24-85D6-4DF9-8E76-ACF69D778E43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69897B9F-3542-4A99-8AB7-974C3C2801B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69897B9F-3542-4A99-8AB7-974C3C2801B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69897B9F-3542-4A99-8AB7-974C3C2801B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69897B9F-3542-4A99-8AB7-974C3C2801B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65F71895-8D9A-41B1-B1F0-323517F9D6DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65F71895-8D9A-41B1-B1F0-323517F9D6DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65F71895-8D9A-41B1-B1F0-323517F9D6DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65F71895-8D9A-41B1-B1F0-323517F9D6DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37B693E6-0898-49BF-A518-F0D28617D696}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37B693E6-0898-49BF-A518-F0D28617D696}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37B693E6-0898-49BF-A518-F0D28617D696}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37B693E6-0898-49BF-A518-F0D28617D696}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC797066-007A-4CD1-98CD-FB617ED355EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC797066-007A-4CD1-98CD-FB617ED355EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC797066-007A-4CD1-98CD-FB617ED355EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC797066-007A-4CD1-98CD-FB617ED355EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E6A7B24-85D6-4DF9-8E76-ACF69D778E43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E6A7B24-85D6-4DF9-8E76-ACF69D778E43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E6A7B24-85D6-4DF9-8E76-ACF69D778E43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E6A7B24-85D6-4DF9-8E76-ACF69D778E43}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{780CBB2F-8D3B-4F9A-969F-557BED832956} = {BECBA791-F2C4-48A3-8A2A-B61E347D9F11}
+		{0F1C0649-8892-4A6B-803D-7664463B6FE2} = {BECBA791-F2C4-48A3-8A2A-B61E347D9F11}
+		{69897B9F-3542-4A99-8AB7-974C3C2801B2} = {1B24270C-BF8C-464F-8149-C20EA8B9BA4A}
+		{65F71895-8D9A-41B1-B1F0-323517F9D6DD} = {F5F1766B-AB67-4ACC-BD8A-16F26B8726A6}
+		{37B693E6-0898-49BF-A518-F0D28617D696} = {780CBB2F-8D3B-4F9A-969F-557BED832956}
+		{EC797066-007A-4CD1-98CD-FB617ED355EB} = {0F1C0649-8892-4A6B-803D-7664463B6FE2}
+		{7E6A7B24-85D6-4DF9-8E76-ACF69D778E43} = {C3C4C84E-2E27-47EB-ADE4-7A2FCD9703A6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E68A5D95-CA7A-4B0F-932B-CDB8CF491CD7}
+	EndGlobalSection
+EndGlobal
