@@ -12,3 +12,15 @@
 /aspnetcore/RallyVinicius/.vs/RallyVinicius/config/applicationhost.config
 /aspnetcore/RallyVinicius/RallyVinicius.API/Logs
 /aspnetcore/RallyVinicius/.vs/RallyVinicius/v16/*.suo
+/aspnetcore/CaixaEconomica.Vinicius/CaixaEconomica.Vinicius.API/obj
+/aspnetcore/CaixaEconomica.Vinicius/CaixaEconomica.Vinicius.API/bin
+/aspnetcore/CaixaEconomica.Vinicius/CaixaEconomica.Vinicius.Dominio/obj
+/aspnetcore/CaixaEconomica.Vinicius/CaixaEconomica.Vinicius.Dominio/bin
+/aspnetcore/CaixaEconomica.Vinicius/CaixaEconomica.Vinicius.Infra.CrossCutting/obj
+/aspnetcore/CaixaEconomica.Vinicius/CaixaEconomica.Vinicius.Infra.CrossCutting/bin
+/aspnetcore/CaixaEconomica.Vinicius/CaixaEconomica.Vinicius.Infra.Dados/obj
+/aspnetcore/CaixaEconomica.Vinicius/CaixaEconomica.Vinicius.Infra.Dados/bin
+/aspnetcore/CaixaEconomica.Vinicius/CaixaEconomica.Vinicius.Testes.Dominio/obj
+/aspnetcore/CaixaEconomica.Vinicius/CaixaEconomica.Vinicius.Testes.Dominio/bin
+/aspnetcore/CaixaEconomica.Vinicius/.vs/CaixaEconomica.Vinicius/DesignTimeBuild/.dtbcache.v2
+/aspnetcore/CaixaEconomica.Vinicius/.vs/CaixaEconomica.Vinicius/v16/.suo
