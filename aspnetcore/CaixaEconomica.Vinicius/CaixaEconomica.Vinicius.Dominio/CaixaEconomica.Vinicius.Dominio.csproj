@@ -5,10 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\Notification\" />
     <Folder Include="Interfaces\Servicos\" />
     <Folder Include="Interfaces\Repositorios\" />
-    <Folder Include="Notification\" />
   </ItemGroup>
 
 </Project>
